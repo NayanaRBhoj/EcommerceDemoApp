@@ -1,8 +1,10 @@
-package com.example.ecommercedemoapp;
+package com.example.ecommercedemoapp.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.ecommercedemoapp.R;
 
 public class MainActivity extends AppCompatActivity {
 
