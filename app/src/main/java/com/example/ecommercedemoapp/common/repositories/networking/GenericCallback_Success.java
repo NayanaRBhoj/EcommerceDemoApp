@@ -1,4 +1,4 @@
-package com.example.ecommercedemoapp.common.repository.networking;
+package com.example.ecommercedemoapp.common.repositories.networking;
 
 import io.reactivex.functions.Consumer;
 import retrofit2.Response;

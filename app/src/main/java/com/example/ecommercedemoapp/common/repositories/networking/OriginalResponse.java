@@ -1,4 +1,4 @@
-package com.example.ecommercedemoapp.common.repository.networking;
+package com.example.ecommercedemoapp.common.repositories.networking;
 
 /**
  * Created by nayana on 24/8/18.

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">EcommerceDemoApp</string>
+    <string name="text_noresponse">No response found</string>
 </resources>

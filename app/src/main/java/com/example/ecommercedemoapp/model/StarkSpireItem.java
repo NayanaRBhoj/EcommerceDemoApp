@@ -7,29 +7,6 @@ import java.util.List;
 
 public class StarkSpireItem {
 
-    @SerializedName("categories")
-    @Expose
-    private List<Category> categories = null;
-    @SerializedName("rankings")
-    @Expose
-    private List<Ranking> rankings = null;
-
-    public List<Category> getCategories() {
-        return categories;
-    }
-
-    public void setCategories(List<Category> categories) {
-        this.categories = categories;
-    }
-
-    public List<Ranking> getRankings() {
-        return rankings;
-    }
-
-    public void setRankings(List<Ranking> rankings) {
-        this.rankings = rankings;
-    }
-
     public class Category {
 
         @SerializedName("id")
@@ -78,6 +55,31 @@ public class StarkSpireItem {
         }
 
     }
+
+
+        @SerializedName("categories")
+        @Expose
+        private List<Category> categories = null;
+        @SerializedName("rankings")
+        @Expose
+        private List<Ranking> rankings = null;
+
+        public List<Category> getCategories() {
+            return categories;
+        }
+
+        public void setCategories(List<Category> categories) {
+            this.categories = categories;
+        }
+
+        public List<Ranking> getRankings() {
+            return rankings;
+        }
+
+        public void setRankings(List<Ranking> rankings) {
+            this.rankings = rankings;
+        }
+
 
     public class Product {
 
@@ -222,7 +224,7 @@ public class StarkSpireItem {
         private String name;
         @SerializedName("value")
         @Expose
-        private int value;
+        private double value;
 
         public String getName() {
             return name;
@@ -232,11 +234,11 @@ public class StarkSpireItem {
             this.name = name;
         }
 
-        public int getValue() {
+        public double getValue() {
             return value;
         }
 
-        public void setValue(int value) {
+        public void setValue(double value) {
             this.value = value;
         }
 
@@ -290,6 +292,4 @@ public class StarkSpireItem {
         }
 
     }
-
-
 }

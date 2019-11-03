@@ -1,4 +1,4 @@
-package com.example.ecommercedemoapp.common.repository.networking;
+package com.example.ecommercedemoapp.common.repositories.networking;
 
 import com.example.ecommercedemoapp.common.App;
 import com.google.gson.GsonBuilder;
