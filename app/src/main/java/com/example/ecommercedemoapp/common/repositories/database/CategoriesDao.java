@@ -19,6 +19,6 @@ public interface CategoriesDao {
     void insertAll(List<CategoryList> activeDayzLists);
 
     @Query("SELECT * FROM categories where id = :id ")
-    CategoryList getProductFromID(String id);
+    CategoryList getProductFromID(int id);
 
 }
