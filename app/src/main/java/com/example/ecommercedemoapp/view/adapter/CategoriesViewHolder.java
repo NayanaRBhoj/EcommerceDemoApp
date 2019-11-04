@@ -9,11 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class CategoriesViewHolder extends RecyclerView.ViewHolder {
-    TextView textName,textProduct;
+    TextView textName;
 
     public CategoriesViewHolder(@NonNull View itemView) {
         super(itemView);
         textName = itemView.findViewById(R.id.text_name);
-        textProduct = itemView.findViewById(R.id.text_product);
     }
 }

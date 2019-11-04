@@ -13,6 +13,7 @@
             android:layout_height="match_parent">
 
             <RelativeLayout
+                android:background="@color/white_"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -24,7 +25,98 @@
                     android:text="@string/text_noresponse"
                     android:visibility="gone" />
 
+                <LinearLayout
+                    android:id="@+id/ll_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:onClick="@{()-> categoriesViewModel.onCategoriesTabClick()}"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/text_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/categories"
+                            android:textColor="@android:color/black"
+                            android:textSize="15.4sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/view_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorPrimary" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_earn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/grey3"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/text_earn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/subcategories"
+                            android:textColor="@color/grey1"
+                            android:textSize="15.4sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/view_earn"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorPrimary"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_burn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/grey3"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/text_burn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/products"
+                            android:textColor="@color/grey1"
+                            android:textSize="15.4sp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:id="@+id/view_burn"
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/colorPrimary"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
                 <androidx.recyclerview.widget.RecyclerView
+                    android:layout_below="@+id/ll_tab"
                     android:id="@+id/recyclerview_categories"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
@@ -55,4 +147,6 @@
             name="categoriesViewModel"
             type="com.example.ecommercedemoapp.viewmodel.CategoriesViewModel" />
     </data>
+
+
 </layout>

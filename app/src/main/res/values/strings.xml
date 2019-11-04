@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">EcommerceDemoApp</string>
     <string name="text_noresponse">No response found</string>
+
+    <string name="categories">Categories</string>
+    <string name="subcategories">Sub-Categories</string>
+    <string name="products">Products</string>
 </resources>

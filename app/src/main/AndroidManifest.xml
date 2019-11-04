@@ -20,6 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.DetailsActivity" />
+        <activity android:name=".view.ProductsActivity" />
         <!--<uses-library android:name="org.apache.http.legacy" android:required="false"/>-->
     </application>
 

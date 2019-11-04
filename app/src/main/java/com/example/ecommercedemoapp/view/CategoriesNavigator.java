@@ -8,9 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface CategoriesNavigator extends BaseNavigator {
-    void success(List<CategoryList> list_categories,
-                 List<CategoryList> list_suncategories,
-                 List<CategoryList> list_products);
-
+    void success(List<CategoryList> list_categories);
     void failure();
+    void categoryClick();
 }

@@ -25,6 +25,10 @@ import static com.example.ecommercedemoapp.common.Utilities.isInternetAvailable;
 public class CategoriesViewModel extends BaseViewModel<CategoriesNavigator> {
     private Context mContext = App.get();
 
+    public void onCategoriesTabClick() {
+        mNavigator.categoryClick();
+    }
+
     public void getCategoriesWebCall() {
         if (!isInternetAvailable(mContext)) {
             return;
@@ -70,6 +74,27 @@ public class CategoriesViewModel extends BaseViewModel<CategoriesNavigator> {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new GenericCallback_Success<>(successRes),
                         new GenericCallback_Error<>(errorRes));
+    }
+
+    public void getValuesById(int id) {
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    CategoryList list = App.get().getDB().categoriesDao().getProductFromID(id);
+                    List<CategoryList> list_categories = new ArrayList<>();
+                    if (list.getChildCategories() != null)
+                        if (list.getChildCategories().size() > 0) {
+                            for (int i = 0; i < list.getChildCategories().size(); i++) {
+                                list_categories.add(App.get().getDB().categoriesDao().getProductFromID(list.getChildCategories().get(i)));
+                            }
+                        }
+                    mNavigator.success(list_categories);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
     }
 
     public class insertIntoDB extends AsyncTask<List<CategoryList>, Void, Void> {
@@ -130,7 +155,7 @@ public class CategoriesViewModel extends BaseViewModel<CategoriesNavigator> {
                                 e.printStackTrace();
                             }
                         }
-                        mNavigator.success(list_categories, list_suncategories, list_products);
+                        mNavigator.success(list_categories);
                     } catch (Exception ex) {
                         ex.printStackTrace();
                     }
